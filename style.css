@@ -5,12 +5,11 @@
 }
 
 html {
-  max-height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
       background-color: #F7F6F3;
 
 }
@@ -39,7 +38,7 @@ body {
 }
 
 .nav-logo img {
-  height: 40px;        
+  height: 80px !important;        
   width: auto;        
   max-width: 100%;     
   object-fit: contain; 
@@ -536,12 +535,24 @@ background:#F7F6F3;
 }
 
 .legal-container{
-max-width:750px;
+max-width:820px;
 margin:auto;
-padding:80px 40px;
+padding:72px 40px;
 }
 
+.legal-page h1{
+font-size:44px;
+line-height:1.15;
+margin-bottom:32px;
+padding-top:20px;
+}
 
+.legal-page h2{
+font-size:28px;
+line-height:1.2;
+margin-top:44px;
+margin-bottom:18px;
+}
 
 /* Last updated */
 
@@ -549,7 +560,7 @@ padding:80px 40px;
 font-family:"Source Sans 3",sans-serif;
 font-size:16px;
 color:#4A4A4A;
-margin-bottom:24px;
+margin-bottom:28px;
 }
 
 /* Body text */
@@ -559,13 +570,13 @@ font-family:"Source Sans 3",sans-serif;
 font-size:16.5px;
 line-height:1.75;
 color:#4A4A4A;
-margin-bottom:22px;
+margin-bottom:18px;
 }
 
 /* Lists */
 
 .legal-container ul{
-margin:16px 0 24px 18px;
+margin:12px 0 20px 18px;
 }
 
 .legal-container li{
@@ -573,7 +584,7 @@ font-family:"Source Sans 3",sans-serif;
 font-size:16.5px;
 line-height:1.75;
 color:#4A4A4A;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .legal-container li::marker{
@@ -591,215 +602,24 @@ text-decoration:none;
 text-decoration:underline;
 }
 
-@media (max-width: 900px) {
-
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .testimonials {
-    padding: 80px 24px 100px 24px;
-  }
-
-  .nav-logo{
-    height: auto;
-    width: 50%;
-  }
-
-   .hero-grid{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
+.book_btn {
+  background-color:#38524A;
+  color:  #EDEDE8;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+  font-family: "Cormorant Garamond", serif;
+  transition: scale 0.2 ease;
+  text-align: center;
+  text-decoration: none;
 }
 
-@media (max-width:768px){
-
-
-
-.container{
-padding:0 24px;
-}
-
-h1{
-font-size:30px;
-padding-top:60px;
-margin-bottom:24px;
-}
-
-.about-hero{
-grid-template-columns:1fr;
-}
-
-.about-image img{
-margin:24px 0;
-}
-
-.about-body p,
-.about-intro p{
-font-size:17px;
-margin-bottom:24px;
-}
-
-
-.section-divider{
-width:60px;
-margin:60px auto;
-}
-
-.cta-grid{
-grid-template-columns:1fr;
-gap:40px;
-}
-
-.cta-band{
-padding:60px 24px;
-}
-
-.legal-container{
-padding:60px 24px;
-}
-
-h1{
-font-size:30px;
-}
-
-h2{
-font-size:20px;
-}
-
-.legal-container p,
-.legal-container li{
-font-size:16px;
-}
-
-}
-/*media - change if you want to change the display for a device.*/
-
-/*Extra small screens*/
-@media (min-width: 320px) {
-
-
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    transition: all 0.5s ease-in-out;
-    background: rgba(167, 167, 167, 0.5);
-    backdrop-filter: blur(10px);
-  }
-
-  h1,h2,h3 {
-    font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: 36px;
-  color: #2E2E2E;
-  margin-bottom: 60px;
-  }
-
-  .menu li a {
-    padding: 10px;
-    font-family: 'Cormorant Garamond', sans-serif;
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-  }
-
-  .open-menu,
-  .close-menu {
-    display: block;
-    margin-top: 3rem;
-  }
-
-  #check:checked ~ .menu {
-    right: 0;
-  }
-
-  #check:checked ~ .open-menu {
-    visibility: hidden;
-  }
-
-  .menu-2 {
-    display: none;
-  }
-
-  .nav-bar {
-    display: flex;
-    flex-direction: column;
-        text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-logo img {
-    width: 50%;
-    height: auto;
-  }
-
-  /*--------------------------------------------HEADER------------------------------------------------*/
-
-  .hero {
-    width: 100%;
-    min-height: 100%;
-    margin: 0%;
-    padding: 0%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-grid{
-    display: block;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
-  }
-
-  .hero-image{
-    display: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .tagline{
-    font-style: italic;
-    text-align: center;
-  }
-
-
-
-
-  /********************************************************** BUTTONS************************************/
-
-
- 
-  .book_btn {
-    background-color:#38524A;
-    color:  #EDEDE8;
-    padding: 0.5rem 0.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 400;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-    font-family: "Cormorant Garamond", serif;
-    transition: scale 0.2 ease;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  /*---------------------------------------------------FOOTER-----------------------------------------------------------------*/
+ /*---------------------------------------------------FOOTER-----------------------------------------------------------------*/
   .site-footer {
     background: #38524A;
     color: #EDEDE8;
@@ -886,7 +706,208 @@ font-size:16px;
     font-family: "Source Sans 3", sans-serif;
     font-size: 14px;
     opacity: 0.9;
+    color: #EDEDE8;
+    text-align: center;
   }
+
+  .footer-legal p {
+    color: #EDEDE8;
+    font-size: 14px;
+    margin: 0;
+    opacity: 1;
+
+}
+  
+@media (max-width: 900px) {
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .testimonials {
+    padding: 80px 24px 100px 24px;
+  }
+
+  .nav-logo{
+    height: auto;
+    width: auto;
+  }
+
+   .hero-grid{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:768px){
+
+
+
+.container{
+padding:0 24px;
+}
+
+h1{
+font-size:30px;
+padding-top:60px;
+margin-bottom:24px;
+}
+
+.about-hero{
+grid-template-columns:1fr;
+}
+
+.about-image img{
+margin:24px 0;
+}
+
+.about-body p,
+.about-intro p{
+font-size:17px;
+margin-bottom:24px;
+}
+
+
+.section-divider{
+width:60px;
+margin:60px auto;
+}
+
+.cta-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.cta-band{
+padding:60px 24px;
+}
+
+.legal-container{
+padding:60px 24px;
+}
+
+h1{
+font-size:30px;
+}
+
+h2{
+font-size:20px;
+}
+
+.legal-container p,
+.legal-container li{
+font-size:16px;
+}
+
+}
+/*media - change if you want to change the display for a device.*/
+
+/*Extra small screens*/
+@media (max-width: 767px) {
+
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    background: rgba(167, 167, 167, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+  h1,h2,h3 {
+    font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #2E2E2E;
+  margin-bottom: 60px;
+  }
+
+  .menu li a {
+    padding: 10px;
+    font-family: 'Cormorant Garamond', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  #check:checked ~ .open-menu {
+    visibility: hidden;
+  }
+
+  .menu-2 {
+    display: none;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo img {
+    height: 60px !important;
+    width: auto !important;
+}
+
+  /*--------------------------------------------HEADER------------------------------------------------*/
+
+  .hero {
+    width: 100%;
+    min-height: 100%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-grid{
+    display: block;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .hero-image{
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tagline{
+    font-style: italic;
+    text-align: center;
+  }
+
+
+
+
+  /********************************************************** BUTTONS************************************/
+
+
+ 
 
 }
 
@@ -908,7 +929,7 @@ font-size:16px;
   }
 
 .nav-logo img {
-    height: 50px;
+    height: 80px;
   }
 
   .menu,
@@ -1060,10 +1081,6 @@ font-size:16px;
 
   .nav-bar a {
     font-size: 1rem;
-  }
-
-  .nav-logo img {
-    height: 60px;
   }
 
 }
