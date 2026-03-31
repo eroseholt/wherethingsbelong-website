@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wherethingsbelong.co.uk/sitemap.xml
