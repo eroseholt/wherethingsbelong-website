@@ -133,13 +133,15 @@
       .step::before {
         content: attr(data-step);
         position: absolute;
-        left: -14px;
-        top: 0.5rem;
-        width: 28px;
-        height: 28px;
+        left: -18px;
+        top: 0.45rem;
+        width: 36px;
+        height: 36px;
         background: #a7a376;
         color: white;
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -163,7 +165,7 @@
 ======================== */
 
       .cta-section {
-        background-color: #efefea;
+        background-color: #f7f6f3;
         padding: 80px 0;
       }
       .cta-grid {
@@ -222,9 +224,50 @@
         }
 
         .step {
-          padding-left: 50px;
+          padding-left: 42px;
+        }
+        
+        h1 {
+          font-size: 34px;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
 
+        .intro {
+          font-size: 16px;
+          line-height: 1.7;
+          max-width: 100%;
+          margin-bottom: 48px;
+        }
+
+        .timeline-section {
+          padding: 72px 0;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .step p,
+        .step li {
+         font-size: 16px;
+          line-height: 1.75;
+        }
+
+        .step {
+          padding-left: 46px;
+        }
+
+        .step::before {
+          width: 32px;
+          height: 32px;
+          left: -16px;
+          font-size: 16px;
+        }
+
+        .step::after {
+           top: 2rem;
+        }
         .cta-grid {
           grid-template-columns: 1fr;
         }
@@ -256,109 +299,125 @@
       </div>
     </div>
 
-    <!-- STEPS 1–3 -->
-    <section class="timeline-section bg-muted">
-      <div class="container">
-        <div class="timeline">
-          <div class="step" data-step="1">
-            <h2>Initial Enquiry</h2>
-            <p>
-              The first step is to get in touch by email or through the website.
-            </p>
-            <p>
-              Once I’ve received your enquiry, I’ll reply with a short form to help me understand a little more about your space, the kind of support you’re looking for, and anything important to know at this stage.
-            </p>
-
-            <p>This gives me a clearer picture of the project and helps me decide the most appropriate next step before we arrange an initial conversation.</p>
-          </div>
-
-          <div class="step" data-step="2">
-            <h2>Discovery Call</h2>
-            <p>
-              Once I’ve reviewed your form, we’ll arrange a complimentary
-              15-minute discovery call.
-            </p>
-            <p>This is a short, focused conversation to help me understand the space in more detail, clarify anything important from your form, and answer any initial questions.</p>
-            <p>It also helps me recommend the right assessment approach, including whether it should be in person or virtual, and the most appropriate assessment length and corresponding cost.</p>
-            </ul>
-          </div>
-
-          <div class="step" data-step="3">
-            <h2>Assessment</h2>
-            <p>
-              Most projects begin with an assessment, usually in person. This gives me the chance to see the space for myself, understand how it currently functions, and talk through how you need it to work day to day.
-            </p>
-            <p>We’ll explore what feels most challenging, what matters most to you, and where support is likely to make the biggest difference. I’ll also look at the shape of the project overall, including any practical constraints, other people involved, and what pace is likely to feel realistic.</p>
-            <p>Assessments typically last between 30 minutes and 2 hours, depending on the size and complexity of the project. The most appropriate length and corresponding cost will be agreed in advance during the discovery call, with the assessment then confirmed once payment has been received. You’ll also receive a short information pack beforehand, so you know what to expect ahead of the assessment.
-            </p>
-
-            <p>Once the assessment is complete, I’ll recommend the most suitable next steps based on the space, the scope of the project, and the kind of support that will be most helpful. This may mean a single half-day or full-day session, a series of sessions recommended from the outset, or an initial block of work with any further sessions agreed later on.</p>
-            </p>
-          </div>
-        </div>
+  <section class="timeline-section bg-muted">
+  <div class="container">
+    <div class="timeline">
+      <div class="step" data-step="1">
+        <h2>Initial Enquiry</h2>
+        <p>
+          The first step is to get in touch by email or through the website.
+        </p>
+        <p>
+          Once I’ve received your enquiry, I’ll reply with a short form to help me understand a little more about your space, the kind of support you’re looking for, and anything important to know at this stage.
+        </p>
+        <p>
+          This gives me a clearer picture of the project and helps me decide the most appropriate next step before we arrange an initial conversation.
+        </p>
       </div>
-    </section>
 
-    <!-- STEPS 4–6 -->
-    <section class="timeline-section bg-light">
-      <div class="container">
-        <div class="timeline">
-          <div class="step" data-step="4">
-            <h2>Proposal</h2>
-            <p>
-              Following the assessment, I’ll send you a written proposal, usually within 3 to 5 working days.
-            </p>
-            <p>This sets out the recommended scope of the project, including the spaces we would focus on, the main goals and challenges identified, and the session structure I would suggest for the initial block of work.</p>
-            <p>It will also include the estimated number of sessions, the corresponding cost for that block, and the deposit needed to secure your booking, so you have a clear picture of the support being recommended before deciding how you’d like to proceed.</p>
-          </div>
-
-          <div class="step" data-step="5">
-            <h2>Booking & Confirmation</h2>
-            <p>If you decide to go ahead with the proposal, I’ll send over your Client Service Agreement and deposit invoice.
-            </p>
-            <p>Once the signed agreement and deposit have been received, your sessions can be booked and any provisional dates confirmed. I’ll also make sure you have the practical information you need beforehand, so everything feels clear ahead of the first session.</p>
-          </div>
-
-          <div class="step" data-step="6">
-            <h2>Decluttering</h2>
-            <p>Decluttering is the first step in the hands-on work, helping us understand what the space needs to hold before any organising systems are put in place.</p>
-            <p>We work through this together in a way that feels manageable, with guidance throughout, so decisions feel clear and supported.</p>
-          </div>
-        </div>
+      <div class="step" data-step="2">
+        <h2>Discovery Call</h2>
+        <p>
+          Once I’ve reviewed your form, we’ll arrange a complimentary 15-minute discovery call.
+        </p>
+        <p>
+          This is a short, focused conversation to help me understand the space in more detail, clarify anything important from your form, and answer any initial questions.
+        </p>
+        <p>
+          It also helps me recommend the right assessment approach, including whether it should be in person or virtual, and the most appropriate assessment length and corresponding cost.
+        </p>
       </div>
-    </section>
 
-    <!-- STEPS 7–9 -->
-    <section class="timeline-section bg-light">
-      <div class="container">
-        <div class="timeline">
-          <div class="step" data-step="7">
-            <h2>Organising & Systems</h2>
-            <p>Once decluttering is complete, we begin putting practical systems in place so the space works more smoothly day to day.</p>
-            <p>This part of the process is about giving things a clear home and making sure the space is organised in a way that makes sense for how you actually live. We look at how different areas need to function, how items are grouped, and what will make the space easier to use and maintain.<p/>
-            <p>Where possible, we start by making better use of what you already have. From there, we can see whether any additional organising products would help support the system and keep it working well over time.</p>
-          </div>
-
-          <div class="step" data-step="8">
-            <h2>Storage & Installation</h2>
-            <p>Where a space would benefit from additional storage or organising products, I can take measurements for planning purposes and make tailored recommendations based on the space and how it needs to function.</p>
-            <p>Any new storage or organising products are not included in my service fees and would be ordered and purchased directly by you. This may include smaller organising products, such as boxes, containers, and internal storage, as well as fitted solutions such as shelving, wardrobes, or wall-mounted storage.</p>
-            <p>I do not carry out installation or fitting. Any fitted or installed storage would need to be purchased and arranged separately by you.</p>
-            <p>Any measurements shared are for planning purposes only, so final dimensions should always be checked before anything is ordered or installed. Once any installation work is complete, I return to finish organising the space and put the agreed systems in place.</p>
-          </div>
-
-          <div class="step" data-step="9">
-            <h2>Final Review & Maintenance</h2>
-            <p>
-              As the project comes together, we refine the systems as we go to make sure they work in practice. At the end, we review the space together so everything feels clear, functional, and realistic to maintain.
-            </p>
-            <p>
-              We’ll talk through the systems that have been put in place, reflect on the challenges and goals we started with, and look at how the space is working now. You’ll also receive guidance to help you maintain the progress made and keep the space working well over time.
-            </p>
-          </div>
-        </div>
+      <div class="step" data-step="3">
+        <h2>Assessment</h2>
+        <p>
+          Most projects begin with an assessment, usually in person. This gives me the chance to see the space for myself, understand how it currently functions, and talk through how you need it to work day to day.
+        </p>
+        <p>
+          We’ll explore what feels most challenging, what matters most to you, and where support is likely to make the biggest difference. I’ll also look at the shape of the project overall, including any practical constraints, other people involved, and what pace is likely to feel realistic.
+        </p>
+        <p>
+          Assessments typically last between 30 minutes and 2 hours, depending on the size and complexity of the project. The most appropriate length and corresponding cost will be agreed in advance during the discovery call, with the assessment then confirmed once payment has been received. You’ll also receive a short information pack beforehand, so you know what to expect ahead of the assessment.
+        </p>
+        <p>
+          Once the assessment is complete, I’ll recommend the most suitable next steps based on the space, the scope of the project, and the kind of support that will be most helpful. This may mean a single half-day or full-day session, a series of sessions recommended from the outset, or an initial block of work with any further sessions agreed later on.
+        </p>
       </div>
-    </section>
+
+      <div class="step" data-step="4">
+        <h2>Proposal</h2>
+        <p>
+          Following the assessment, I’ll send you a written proposal, usually within 3 to 5 working days.
+        </p>
+        <p>
+          This sets out the recommended scope of the project, including the spaces we would focus on, the main goals and challenges identified, and the session structure I would suggest for the initial block of work.
+        </p>
+        <p>
+          It will also include the estimated number of sessions, the corresponding cost for that block, and the deposit needed to secure your booking, so you have a clear picture of the support being recommended before deciding how you’d like to proceed.
+        </p>
+      </div>
+
+      <div class="step" data-step="5">
+        <h2>Booking & Confirmation</h2>
+        <p>
+          If you decide to go ahead with the proposal, I’ll send over your Client Service Agreement and deposit invoice.
+        </p>
+        <p>
+          Once the signed agreement and deposit have been received, your sessions can be booked and any provisional dates confirmed. I’ll also make sure you have the practical information you need beforehand, so everything feels clear ahead of the first session.
+        </p>
+      </div>
+
+      <div class="step" data-step="6">
+        <h2>Decluttering</h2>
+        <p>
+          Decluttering is the first step in the hands-on work, helping us understand what the space needs to hold before any organising systems are put in place.
+        </p>
+        <p>
+          We work through this together in a way that feels manageable, with guidance throughout, so decisions feel clear and supported.
+        </p>
+      </div>
+
+      <div class="step" data-step="7">
+        <h2>Organising & Systems</h2>
+        <p>
+          Once decluttering is complete, we begin putting practical systems in place so the space works more smoothly day to day.
+        </p>
+        <p>
+          This part of the process is about giving things a clear home and making sure the space is organised in a way that makes sense for how you actually live. We look at how different areas need to function, how items are grouped, and what will make the space easier to use and maintain.
+        </p>
+        <p>
+          Where possible, we start by making better use of what you already have. From there, we can see whether any additional organising products would help support the system and keep it working well over time.
+        </p>
+      </div>
+
+      <div class="step" data-step="8">
+        <h2>Storage & Installation</h2>
+        <p>
+          Where a space would benefit from additional storage or organising products, I can take measurements for planning purposes and make tailored recommendations based on the space and how it needs to function.
+        </p>
+        <p>
+          Any new storage or organising products are not included in my service fees and would be ordered and purchased directly by you. This may include smaller organising products, such as boxes, containers, and internal storage, as well as fitted solutions such as shelving, wardrobes, or wall-mounted storage.
+        </p>
+        <p>
+          I do not carry out installation or fitting. Any fitted or installed storage would need to be purchased and arranged separately by you.
+        </p>
+        <p>
+          Any measurements shared are for planning purposes only, so final dimensions should always be checked before anything is ordered or installed. Once any installation work is complete, I return to finish organising the space and put the agreed systems in place.
+        </p>
+      </div>
+
+      <div class="step" data-step="9">
+        <h2>Final Review & Maintenance</h2>
+        <p>
+          As the project comes together, we refine the systems as we go to make sure they work in practice. At the end, we review the space together so everything feels clear, functional, and realistic to maintain.
+        </p>
+        <p>
+          We’ll talk through the systems that have been put in place, reflect on the challenges and goals we started with, and look at how the space is working now. You’ll also receive guidance to help you maintain the progress made and keep the space working well over time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="cta-section">
       <div class="container">

@@ -874,6 +874,10 @@ font-size:16px;
     backdrop-filter: blur(10px);
   }
 
+  .book_btn {
+    display: none;
+  }
+  
   h1,h2,h3 {
     font-family: "Cormorant Garamond", serif;
   font-weight: 500;
@@ -892,10 +896,42 @@ font-size:16px;
 
   .open-menu,
   .close-menu {
+    color: #A7A376;
+  }
+
+  .open-menu,
+  .close-menu {
     display: block;
     margin-top: 3rem;
   }
 
+  .nav-bar {
+    padding: 14px 20px;
+    min-height: 72px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    height: 52px !important;
+    width: auto !important;
+  }
+
+  .open-menu {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    transform: none;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .open-menu i {
+    line-height: 1;
+  }
+  
   #check:checked ~ .menu {
     right: 0;
   }
