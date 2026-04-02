@@ -168,7 +168,16 @@
       .cta-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 64px;
+        align-items: stretch;
+      }
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 310px;
+        margin: 0 auto;
       }
       .cta h3 {
         font-family: "Cormorant Garamond", serif;
@@ -179,7 +188,8 @@
       }
       .cta p {
         font-size: 16.5px;
-        margin-bottom: 20px;
+        line-height: 1.7;
+        margin: 0;
       }
       .button {
         display: inline-block;
@@ -189,6 +199,9 @@
         font-size: 16px;
         padding: 14px 26px;
         border-radius: 4px;
+        margin-top: 32px;
+        min-width: 170px;
+        text-align: center;
       }
       .button:hover {
         background-color: #2f433d;
@@ -331,7 +344,7 @@
           <div class="step" data-step="5">
             <h2>Scheduling</h2>
             <p>
-              S Once the proposal is agreed, sessions are scheduled and
+              Once the proposal is agreed, sessions are scheduled and
               practical details are confirmed. I’ll guide you through what to
               expect and how to prepare, so the process feels clear and easy to
               follow.
