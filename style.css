@@ -27,7 +27,7 @@ body {
   list-style: none;
   color: #000;
   padding: auto;
-  background-color: #F7F6F3;
+  background-color: #efefea;
   border-radius: 5px;
   border-bottom: #EDEDE8 solid 1px;
 }
@@ -42,6 +42,13 @@ body {
   width: auto;        
   max-width: 100%;     
   object-fit: contain; 
+}
+ .logo-desktop {
+  display: block !important;
+}
+
+.logo-mobile {
+  display: none !important;
 }
 
 .menu {
@@ -873,6 +880,26 @@ font-size:16px;
     background: rgba(167, 167, 167, 0.5);
     backdrop-filter: blur(10px);
   }
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-desktop {
+  display: block !important;
+  height: 38px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+.logo-mobile {
+  display: block !important;
+  height: 16px !important;
+  width: auto !important;
+  max-width: 170px;
+  object-fit: contain;
+}
 
   .book_btn {
     display: none;
@@ -912,10 +939,7 @@ font-size:16px;
     align-items: center;
   }
 
-  .nav-logo img {
-    height: 52px !important;
-    width: auto !important;
-  }
+  
 
   .open-menu {
     position: fixed;
@@ -951,10 +975,7 @@ font-size:16px;
     justify-content: space-between;
   }
 
-  .nav-logo img {
-    height: 60px !important;
-    width: auto !important;
-}
+
 
   /*--------------------------------------------HEADER------------------------------------------------*/
 
