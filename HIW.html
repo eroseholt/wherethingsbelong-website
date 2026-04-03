@@ -163,7 +163,22 @@
       /* ========================
    CTA
 ======================== */
+.cta-flourish-section {
+  position: relative;
+  overflow: visible;
+  padding: 120px 0 72px;
+}
 
+.cta-flourish {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 180px;
+  height: auto;
+  transform: translate(-50%, -100%);
+  opacity: 0.72;
+  pointer-events: none;
+}
       .cta-section {
         background-color: #f7f6f3;
         padding: 80px 0;
@@ -268,6 +283,17 @@
         .step::after {
            top: 2rem;
         }
+
+        .cta-flourish-section {
+  padding: 76px 0 56px;
+}
+
+.cta-flourish {
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -100%);
+}
+
         .cta-grid {
           grid-template-columns: 1fr;
         }
@@ -420,8 +446,10 @@
   </div>
 </section>
 
-    <section class="cta-section">
-      <div class="container">
+    <section class="cta-section cta-flourish-section">
+  <img src="PNG-Imgs/Flourish.png" alt="" class="cta-flourish" />
+
+  <div class="container">
         <div class="cta-grid">
           <div class="cta">
             <h3>Services</h3>
