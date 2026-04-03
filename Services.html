@@ -43,6 +43,35 @@
         margin: 0 auto;
       }
 
+      .cta-flourish-section {
+  position: relative;
+  overflow: visible;
+  padding: 120px 0 72px;
+}
+
+.cta-flourish {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 180px;
+  height: auto;
+  transform: translate(-50%, -100%);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .cta-flourish-section {
+    padding: 76px 0 56px;
+  }
+
+  .cta-flourish {
+    left: 50%;
+    width: 120px;
+    transform: translate(-50%, -100%);
+  }
+}
+
       /* ========================
    Background Bands
 ======================== */
@@ -64,15 +93,20 @@
       h1 {
         font-family: "Cormorant Garamond", serif;
         font-size: 42px;
-        margin-top: 100px;
-        margin-bottom: 30px;
+        margin-top: 0;
+        margin-bottom: 24px;
+        padding-top: 0;
       }
 
       .intro {
         max-width: 760px;
         font-size: 18px;
         line-height: 1.7;
-        margin-bottom: 80px;
+        margin-bottom: 0;
+      }
+
+      .services-intro {
+        padding: 140px 0 40px;
       }
 
       h2 {
@@ -83,8 +117,12 @@
       }
 
       .section {
-        padding: 100px 0;
+        padding: 64px 0;
       }
+
+      .spaces-help-section {
+  padding-bottom: 170px;
+}
 
       .section p {
         font-size: 17px;
@@ -130,7 +168,12 @@
         width: 80px;
         height: 1px;
         background: #a7a376;
-        margin: 100px auto 60px;
+        margin: 0 auto;
+      }
+
+      .divider-wrap {
+        background: #efefea;
+        padding: 8px 0 0;
       }
 
       /* ========================
@@ -189,34 +232,48 @@
 ======================== */
 
       @media (max-width: 768px) {
-        .page-wrapper {
-          padding: 0 24px;
-        }
-
-        .split {
-          grid-template-columns: 1fr;
-        }
-
-        h1 {
-          font-size: 30px;
-          margin-top: 60px;
-        }
-
-        .intro {
-          font-size: 17px;
-          margin-bottom: 60px;
-        }
-
-        .cta-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .button {
-          display: block;
-          width: 100%;
-          text-align: center;
-        }
+      .page-wrapper {
+        padding: 0 24px;
       }
+
+      .services-intro {
+       padding: 88px 0 32px;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+       font-size: 30px;
+       margin-top: 0;
+       margin-bottom: 20px;
+       padding-top: 0;
+     }
+
+     .intro {
+        font-size: 17px;
+        margin-bottom: 0;
+      }
+
+      .section {
+        padding: 44px 0;
+      }
+
+      .spaces-help-section {
+    padding-bottom: 90px;
+  }
+
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+  }
     </style>
   </head>
 
@@ -234,19 +291,24 @@
     </header>
 
     <!-- INTRO -->
-    <section class="bg-light">
+    <section class="bg-light services-intro">
       <div class="page-wrapper">
         <div class="container">
           <h1>Services</h1>
 
-          <p class="intro">
-            I offer professional decluttering and organising support for homes and small businesses, shaped around how the space needs to function and what will make day-to-day life easier over time. <br>Most projects involve a combination of the services below rather than one fixed type of support. <br>The approach is always tailored to the space, the challenges involved, and what will be most helpful in practice.</p>
-        </div>
+<div class="intro">
+  <p>
+    I offer professional decluttering and organising support for homes and small businesses, shaped around how the space needs to function and what will make day-to-day life easier over time.
+  </p>
+  <p>
+    Most projects involve a combination of the services below rather than one fixed type of support. The approach is always tailored to the space, the challenges involved, and what will be most helpful in practice.
+  </p>
+</div>
       </div>
     </section>
 
     <!-- DECLUTTERING -->
-    <section class="section bg-light">
+    <section class="section bg-muted">
       <div class="container split">
         <div>
           <h2>Decluttering Support</h2>
@@ -269,7 +331,7 @@
     </section>
 
     <!-- ORGANISING -->
-    <section class="section bg-muted">
+    <section class="section bg-light">
       <div class="container">
         <h2>Organising & Systems</h2>
         <p>
@@ -287,7 +349,7 @@
     </section>
 
     <!-- STORAGE -->
-    <section class="section bg-light">
+    <section class="section bg-muted">
       <div class="container split">
         <img
           src="PNG-Imgs/orgalux-2RKhuWvrpIc-unsplash.png"
@@ -315,7 +377,7 @@
     </section>
 
     <!-- PAPERWORK -->
-    <section class="section bg-muted">
+    <section class="section bg-light">
       <div class="container split">
         <div>
           <h2>Paperwork, Admin & Digital Organisation</h2>
@@ -340,7 +402,7 @@
     </section>
 
     <!-- FOLLOW UP -->
-    <section class="section bg-light">
+    <section class="section bg-muted">
       <div class="container">
         <h2>Ongoing Support</h2>
         <p>
@@ -360,7 +422,7 @@
     </section>
 
     <!-- SPACES -->
-    <section class="section bg-muted">
+    <section class="section bg-light spaces-help-section">
       <div class="container">
         <h2>Spaces I Can Help With</h2>
         <p>
@@ -372,12 +434,14 @@
       </div>
     </section>
 
-    <div class="divider"></div>
+  
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-grid">
+<!-- CTA -->
+<section class="cta-section cta-flourish-section">
+  <img src="PNG-Imgs/flourish.png" alt="" class="cta-flourish" />
+
+  <div class="container">
+    <div class="cta-grid">
           <div>
             <h3>How It Works</h3>
             <p>See how the process works, from first enquiry to steady progress at home.</p>
