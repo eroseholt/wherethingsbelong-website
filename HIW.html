@@ -35,6 +35,12 @@
         color: #4a4a4a;
       }
 
+      header,
+#nav-placeholder {
+  position: relative;
+  z-index: 100;
+}
+
       .page-wrapper {
         padding: 0 40px;
       }
@@ -43,6 +49,190 @@
         max-width: 1100px;
         margin: 0 auto;
       }
+
+      /* ========================
+   Table of Contents
+======================== */
+
+.toc {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 0 72px;
+  padding: 22px 24px;
+  background: rgba(56, 82, 74, 0.85);
+  border: 1px solid rgba(167, 163, 118, 0.28);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.toc-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  color: #edede8;
+  margin: 0 0 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.toc-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 12px;
+}
+
+.toc-links a {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  color: rgba(237, 237, 232, 0.84);
+  text-decoration: none;
+  font-size: 16.5px;
+  line-height: 1.55;
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.toc-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #a7a376;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.toc-links a:hover {
+  color: #edede8;
+}
+
+.toc-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.toc-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.toc-links a:focus-visible {
+  color: #edede8;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.step {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .toc {
+    max-width: 100%;
+    margin: 0 0 48px;
+    padding: 20px 18px;
+  }
+
+  .step {
+  scroll-margin-top: 150px;
+}
+
+  .toc-title {
+    font-size: 23px;
+    margin-bottom: 14px;
+  }
+
+  .toc-links {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .toc-links a {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 769px) {
+  .sticky-toc {
+    position: relative;
+    z-index: 20;
+    max-width: 100%;
+    padding: 18px 22px;
+    margin-bottom: 0;
+  }
+
+  .sticky-toc .toc-links {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+}
+
+.how-it-works-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.toc-column {
+  align-self: start;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 110px;
+}
+
+.timeline-column {
+  min-width: 0;
+}
+
+.mobile-toc-wrap {
+  display: none;
+}
+
+.mobile-toc {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 24px 12px;
+  background: #efefea;
+  border-top: 1px solid rgba(167, 163, 118, 0.18);
+  border-bottom: 1px solid rgba(167, 163, 118, 0.18);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.mobile-toc::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-toc a {
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: #2e2e2e;
+  background: rgba(56, 82, 74, 0.08);
+  border: 1px solid rgba(56, 82, 74, 0.14);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-toc a:hover,
+.mobile-toc a:focus-visible {
+  background: rgba(56, 82, 74, 0.12);
+  border-color: rgba(56, 82, 74, 0.22);
+  color: #2e2e2e;
+  outline: none;
+}
+
 
       /* ========================
    Typography
@@ -59,7 +249,7 @@
         max-width: 760px;
         font-size: 18px;
         line-height: 1.7;
-        margin-bottom: 80px;
+        margin-bottom: 36px;
       }
 
       h2 {
@@ -161,6 +351,34 @@
       }
 
       /* ========================
+   Intro Divider
+======================== */
+
+.intro-section {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 40px;
+}
+
+.intro-divider {
+  position: absolute;
+  left: 75%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  width: min(700px, 56vw);
+  height: auto;
+  display: block;
+  opacity: 0.78;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.timeline-section {
+  position: relative;
+  z-index: 1;
+}
+
+      /* ========================
    CTA
 ======================== */
 .cta-flourish-section {
@@ -249,15 +467,55 @@
         }
 
         .intro {
-          font-size: 16px;
-          line-height: 1.7;
-          max-width: 100%;
-          margin-bottom: 48px;
-        }
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
 
-        .timeline-section {
-          padding: 72px 0;
-        }
+.timeline-section {
+  padding: 36px 0 72px;
+}
+
+          .how-it-works-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .toc-column {
+    position: static;
+  }
+
+    .toc-desktop {
+    display: none;
+  }
+
+  .mobile-toc-wrap {
+    display: block;
+    position: sticky;
+    top: 96px;
+    z-index: 10;
+  }
+
+  .mobile-toc {
+    padding: 8px 24px 10px;
+  }
+
+  .intro-section {
+    padding-bottom: 18px;
+  }
+
+  .intro-divider {
+    display: none;
+}
+
+  .intro {
+    margin-bottom: 16px;
+  }
+
+  .timeline-section {
+    padding-top: 36px;
+  }
 
         h2 {
           font-size: 20px;
@@ -315,20 +573,56 @@
     </header>
 
     <!-- INTRO -->
-    <div class="page-wrapper bg-light">
-      <div class="container">
-        <h1>How It Works</h1>
-
-        <p class="intro">
-          If you’re considering working together, this outlines the process from first enquiry <br>to completed sessions, so you know what to expect at each stage.
-        </p>
-      </div>
-    </div>
-
-  <section class="timeline-section bg-muted">
+<div class="page-wrapper bg-light intro-section">
   <div class="container">
-    <div class="timeline">
-      <div class="step" data-step="1">
+    <h1>How It Works</h1>
+
+    <p class="intro">
+      If you’re considering support, this page outlines the process from first enquiry onwards, so you can see how things work, what each stage is for, and what to expect along the way.
+    </p>
+  </div>
+
+  <img src="PNG-Imgs/flowerborder.png" alt="" class="intro-divider" aria-hidden="true" />
+</div>
+
+<div class="mobile-toc-wrap bg-muted">
+  <nav class="mobile-toc" aria-label="Page sections">
+    <a href="#initial-enquiry">Initial Enquiry</a>
+    <a href="#discovery-call">Discovery</a>
+    <a href="#assessment">Assessment</a>
+    <a href="#proposal">Proposal</a>
+    <a href="#booking-confirmation">Booking</a>
+    <a href="#decluttering">Decluttering</a>
+    <a href="#organising-systems">Organising</a>
+    <a href="#storage-installation">Storage</a>
+    <a href="#final-review">Final Review</a>
+  </nav>
+</div>
+
+<section class="timeline-section bg-muted">
+  <div class="container">
+    <div class="how-it-works-layout">
+      
+      <aside class="toc-column toc-desktop">
+        <nav class="toc sticky-toc" aria-label="Table of contents">
+          <h2 class="toc-title">On This Page</h2>
+          <div class="toc-links">
+            <a href="#initial-enquiry">Initial Enquiry</a>
+            <a href="#discovery-call">Discovery Call</a>
+            <a href="#assessment">Assessment</a>
+            <a href="#proposal">Proposal</a>
+            <a href="#booking-confirmation">Booking &amp; Confirmation</a>
+            <a href="#decluttering">Decluttering</a>
+            <a href="#organising-systems">Organising &amp; Systems</a>
+            <a href="#storage-installation">Storage &amp; Installation</a>
+            <a href="#final-review">Final Review &amp; Maintenance</a>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="timeline-column">
+        <div class="timeline">
+      <div class="step" id="initial-enquiry" data-step="1">
         <h2>Initial Enquiry</h2>
         <p>
           The first step is to get in touch by email or through the website.
@@ -341,7 +635,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="2">
+      <div class="step" id="discovery-call" data-step="2">
         <h2>Discovery Call</h2>
         <p>
           Once I’ve reviewed your form, we’ll arrange a complimentary 15-minute discovery call.
@@ -354,7 +648,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="3">
+      <div class="step" id="assessment" data-step="3">
         <h2>Assessment</h2>
         <p>
           Most projects begin with an assessment, usually in person. This gives me the chance to see the space for myself, understand how it currently functions, and talk through how you need it to work day to day.
@@ -370,7 +664,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="4">
+      <div class="step" id="proposal" data-step="4">
         <h2>Proposal</h2>
         <p>
           Following the assessment, I’ll send you a written proposal, usually within 3 to 5 working days.
@@ -383,7 +677,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="5">
+      <div class="step" id="booking-confirmation" data-step="5">
         <h2>Booking & Confirmation</h2>
         <p>
           If you decide to go ahead with the proposal, I’ll send over your Client Service Agreement and deposit invoice.
@@ -393,7 +687,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="6">
+      <div class="step" id="decluttering" data-step="6">
         <h2>Decluttering</h2>
         <p>
           Decluttering is the first step in the hands-on work, helping us sort through what is in the space and decide what stays and what can leave through donation, recycling, or disposal before any organising systems are put in place.
@@ -404,7 +698,7 @@
         <p>Where appropriate, I can take away up to a reasonable car load of donations as part of the service. Removal of rubbish or recycling is not included.</p>
       </div>
 
-      <div class="step" data-step="7">
+      <div class="step" id="organising-systems" data-step="7">
         <h2>Organising & Systems</h2>
         <p>
           Once decluttering is complete, we begin putting practical systems in place so the space works more smoothly day to day.
@@ -417,7 +711,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="8">
+      <div class="step" id="storage-installation" data-step="8">
         <h2>Storage & Installation</h2>
         <p>
           Where a space would benefit from additional storage or organising products, I can take measurements for planning purposes and make tailored recommendations based on the space and how it needs to function.
@@ -433,7 +727,7 @@
         </p>
       </div>
 
-      <div class="step" data-step="9">
+      <div class="step" id="final-review" data-step="9">
         <h2>Final Review & Maintenance</h2>
         <p>
           As the project comes together, we refine the systems as we go to make sure they work in practice. At the end, we review the space together so everything feels clear, functional, and realistic to maintain.
@@ -441,6 +735,8 @@
         <p>
           We’ll talk through the systems that have been put in place, reflect on the challenges and goals we started with, and look at how the space is working now. You’ll also receive guidance to help you maintain the progress made and keep the space working well over time.
         </p>
+      </div>
+      </div>
       </div>
     </div>
   </div>
@@ -457,7 +753,7 @@
             <a href="Services.html" class="button">View Services</a>
           </div>
           <div class="cta">
-            <h3>Get in Touch</h3>
+            <h3>Get In Touch</h3>
             <p>
               If it feels like the right time, send an enquiry and I’ll be in touch.
             </p>
