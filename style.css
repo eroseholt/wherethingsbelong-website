@@ -1691,3 +1691,17 @@ font-size:16px;
   text-align: center;
   margin: 0;
 }
+
+@media (max-width: 767px) {
+  .final-cta .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .final-cta .cta-grid > div {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
