@@ -1108,18 +1108,58 @@ font-size:16px;
 
 
   .menu {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+
+    width: 72%;
+    max-width: 255px;
+    height: auto;
+
     position: fixed;
-    top: 0;
+    top: 12px;
     right: -100%;
     z-index: 100;
-    transition: all 0.5s ease-in-out;
-    background: rgba(167, 167, 167, 0.5);
-    backdrop-filter: blur(10px);
+
+    padding: 72px 22px 20px;
+    margin-right: 12px;
+
+    background: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(167, 163, 118, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(46, 46, 46, 0.08);
+
+    transition: right 0.4s ease-in-out;
+  }
+
+  .menu li {
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .menu li a {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    text-align: left;
+    color: #353535;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.15;
+    text-decoration: none;
+  }
+
+  .close-menu {
+    top: 16px;
+    right: 18px;
+    font-size: 1.4rem;
   }
 
 .nav-logo a {
@@ -1161,14 +1201,6 @@ font-size:16px;
   padding-top: 0;
   }
 
-
-  .menu li a {
-    padding: 10px;
-    font-family: 'Cormorant Garamond', sans-serif;
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-  }
 
   .open-menu,
   .close-menu {
