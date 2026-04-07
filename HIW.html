@@ -234,6 +234,26 @@ html {
 }
 
 
+.mobile-toc-label {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  color: #2e2e2e;
+  padding: 10px 24px 0;
+  background: #efefea;
+}
+
+.mobile-toc-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(239, 239, 234, 0), #efefea 75%);
+}
+
       /* ========================
    Typography
 ======================== */
@@ -586,6 +606,7 @@ html {
 </div>
 
 <div class="mobile-toc-wrap bg-muted">
+  <div class="mobile-toc-label">On this page</div>
   <nav class="mobile-toc" aria-label="Page sections">
     <a href="#initial-enquiry">Initial Enquiry</a>
     <a href="#discovery-call">Discovery</a>
