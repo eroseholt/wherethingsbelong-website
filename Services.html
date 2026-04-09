@@ -38,10 +38,10 @@
         padding: 0 40px;
       }
 
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
+      .services-page-content .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
       .cta-flourish-section {
   position: relative;
@@ -90,13 +90,13 @@
    Typography
 ======================== */
 
-      h1 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 42px;
-        margin-top: 0;
-        margin-bottom: 24px;
-        padding-top: 0;
-      }
+      .services-page-content h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-top: 0;
+}
 
       .intro {
         max-width: 760px;
@@ -105,38 +105,105 @@
         margin-bottom: 0;
       }
 
-      .services-intro {
-        padding: 140px 0 40px;
-      }
+      .services-page-intro {
+  padding: 114px 0 64px;
+  background: linear-gradient(
+    to bottom,
+    #f7f6f3 0,
+    #f7f6f3 230px,
+    #efefea 230px,
+    #efefea 100%
+  );
+}
 
-      h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 28px;
-        margin-top: 0;
-        margin-bottom: 20px;
-      }
+.list-intro {
+  font-weight: 550;
+  color: #2E2E2E;
+  margin-bottom: 10px;
+}
+.services-page-topper {
+  position: relative;
+}
+
+.services-page-topper-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 620px;
+  gap: 24px;
+  align-items: end;
+  position: relative;
+  top: -28px;
+}
+
+.services-page-topper-head h1 {
+  margin-bottom: 18px;
+  color: #2E2E2E;
+}
+
+.services-page-topper-flourish {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: -30px;
+  margin-right: 0;
+}
+
+.services-page-topper-flourish img {
+  display: block;
+  width: 640px;
+  max-width: none;
+  height: auto;
+  opacity: 0.8;
+}
+
+.services-page-intro-box {
+  width: min(100%, 560px);
+  margin-top: -35px;
+  margin-left: 0;
+  padding: 26px 28px;
+  background: #e7e3d3;
+}
+
+.services-page-intro-box p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+
+.services-page-intro-box p:last-child {
+  margin-bottom: 0;
+}
+
+      .services-page-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
       .section {
-        padding: 64px 0;
+        padding: 56px 0;
       }
 
       .spaces-help-section {
-  padding-bottom: 170px;
+  padding-bottom: 120px;
 }
 
       .section p {
-        font-size: 17px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-      }
+  font-size: 17px;
+  line-height: 1.68;
+  margin-bottom: 18px;
+}
 
-      .section ul {
-        margin: 0 0 24px 60px;
-      }
+.section ul {
+  margin: 4px 0 22px 28px;
+  padding-left: 0;
+}
 
-      .section li {
-        margin-bottom: 12px;
-      }
+.section li {
+  font-size: 17px;
+  line-height: 1.68;
+  margin-bottom: 10px;
+}
 
       .section li::marker {
         color: #a7a376;
@@ -164,17 +231,17 @@
    Divider
 ======================== */
 
-      .divider {
-        width: 80px;
-        height: 1px;
-        background: #a7a376;
-        margin: 0 auto;
-      }
+      .services-page-divider {
+  width: 80px;
+  height: 1px;
+  background: #a7a376;
+  margin: 0 auto;
+}
 
-      .divider-wrap {
-        background: #efefea;
-        padding: 8px 0 0;
-      }
+.services-page-divider-wrap {
+  background: #efefea;
+  padding: 8px 0 0;
+}
 
       /* ========================
    CTA
@@ -215,17 +282,17 @@
         margin: 0;
       }
 
-      .button {
-        display: inline-block;
-        background: #38524a;
-        color: #edede8;
-        padding: 14px 26px;
-        text-decoration: none;
-        border-radius: 4px;
-        margin-top: 32px;
-        min-width: 170px;
-        text-align: center;
-      }
+      .services-page-content .button {
+  display: inline-block;
+  background: #38524a;
+  color: #edede8;
+  padding: 14px 26px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 32px;
+  min-width: 170px;
+  text-align: center;
+}
 
       /* ========================
    Responsive
@@ -236,20 +303,48 @@
         padding: 0 24px;
       }
 
-      .services-intro {
-       padding: 88px 0 32px;
-      }
+      .services-page-intro {
+  padding: 88px 0 36px;
+}
+
+.services-page-topper-head {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.services-page-topper-head h1 {
+  margin-bottom: 20px;
+}
+
+.services-page-topper-flourish {
+  display: none;
+}
+
+.services-page-intro-box {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  padding: 22px 20px;
+}
+
+.services-page-intro-box p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+
 
       .split {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-       font-size: 30px;
-       margin-top: 0;
-       margin-bottom: 20px;
-       padding-top: 0;
-     }
+      .services-page-content h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+}
 
      .intro {
         font-size: 17px;
@@ -257,22 +352,22 @@
       }
 
       .section {
-        padding: 44px 0;
+        padding: 40px 0;
       }
 
       .spaces-help-section {
-    padding-bottom: 90px;
+    padding-bottom: 72px;
   }
 
       .cta-grid {
         grid-template-columns: 1fr;
       }
 
-      .button {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
+      .services-page-content .button {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
   }
     </style>
   </head>
@@ -290,22 +385,32 @@
       <!--end of Navigation bar-->
     </header>
 
-    <!-- INTRO -->
-    <section class="bg-light services-intro">
-      <div class="page-wrapper">
-        <div class="container">
+    <main class="services-page-content">
+  <!-- INTRO -->
+  <section class="services-page-intro">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="services-page-topper">
+        <div class="services-page-topper-head">
           <h1>Services</h1>
 
-<div class="intro">
-  <p>
-    I offer professional decluttering and organising support for homes and small businesses, shaped around how the space needs to function and what will make day-to-day life easier over time.
-  </p>
-  <p>
-    Most projects involve a combination of the services below rather than one fixed type of support. The approach is always tailored to the space, the challenges involved, and what will be most helpful in practice.
-  </p>
-</div>
+          <div class="services-page-topper-flourish" aria-hidden="true">
+            <img src="PNG-Imgs/flowerborder.png" alt="" />
+          </div>
+        </div>
+
+        <div class="services-page-intro-box">
+          <p>
+            I offer professional decluttering and organising support for homes and small businesses, shaped around how the space needs to function and what will make day-to-day life easier over time.
+          </p>
+          <p>
+            Most projects involve a combination of the services below rather than one fixed type of support. The approach is always tailored to the space, the challenges involved, and what will be most helpful in practice.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- DECLUTTERING -->
     <section class="section bg-muted">
@@ -314,7 +419,7 @@
           <h2>Decluttering Support</h2>
           <p>Decluttering support helps you sort through what is in a space, reduce what is no longer needed, and make clearer decisions about what remains. When there is too much in a space, everyday tasks can become harder than they need to be, with more effort spent finding, using, and putting things away.</p>
           <p>It is often much easier to make progress with support. When you are living or working in the space and making decisions about your own things, it can be hard to know where to begin, feel confident in the decisions you are making, or keep going once you start. Professional support brings structure, momentum, and an objective outside perspective.</p>
-          <p>This may be especially helpful if you:</p>
+          <p class="list-intro">This may be especially helpful if you:</p>
           <ul>
             <li>know there is too much in the space, but do not know where to begin</li>
             <li>keep putting certain areas off because they feel difficult to face</li>
@@ -338,7 +443,7 @@
           Organising support focuses on making a space easier to use, easier to maintain, and better suited to how you actually live or work. It can be helpful whether you have already decluttered and feel stuck on what comes next, need support with both at the same time, or find yourself repeatedly clearing things out without things staying organised for long.
         </p>
         <p>Often, that is less about effort and more about the systems in the space not properly supporting your routines. The aim is to create practical systems that make everyday tasks feel more straightforward, with things easier to find, easier to put away, and in places that make sense for how the space is used.</p>
-        <p>This may include:</p>
+        <p class="list-intro">This may include:</p>
         <ul>
           <li>giving everyday items a clearer and more practical home</li>
           <li>making frequently used things easier to access and return</li>
@@ -362,7 +467,7 @@
             Sometimes the issue is not just what is in a space, but how the space is set up to hold it. Where storage is not working well, I help plan how the space could function more effectively, whether that means making better use of what is already there, rethinking the layout, or identifying where different storage would be genuinely helpful.
           </p>
           <p>This can be especially useful if a space feels awkward to use, difficult to keep organised, or as though it does not have the right kind of storage for what it needs to hold.</p>
-          <p>Support can include:</p>
+          <p class="list-intro">Support can include:</p>
           <ul>
             <li>reviewing what storage is actually needed</li>
             <li>making tailored recommendations for organising products or internal storage</li>
@@ -385,7 +490,7 @@
             Not all clutter is visible. Sometimes it shows up in overfilled drawers, loose paperwork, overflowing inboxes, or digital folders that have become difficult to navigate.
           </p>
           <p>This kind of disorganisation can make everyday tasks feel harder to start and more stressful to follow through. It is often only when you need something quickly, or when an important deadline, form, bill, or piece of information comes up, that you realise how much the current system is getting in the way. The aim is to create practical systems that make paperwork and digital admin easier to find, easier to manage, and less draining to keep on top of.</p>
-          <p>Support can include:</p>
+          <p class="list-intro">Support can include:</p>
           <ul>
             <li>sorting paperwork into a clearer and more workable system</li>
             <li>setting up simple filing systems for household, personal, or work-related admin</li>
@@ -410,7 +515,7 @@
         </p>
         <p>This can be especially helpful if things have shifted since we last worked together, or if the project always needed to happen more gradually. It can also provide useful continuity during periods of change, when keeping spaces functional can feel harder than usual.</p>
 
-        <p>This may be especially helpful during:</p>
+        <p class="list-intro">This may be especially helpful during:</p>
 
         <ul>
           <li>moving or downsizing</li>
@@ -456,6 +561,7 @@
         </div>
       </div>
     </section>
+  </main>
 
     <div>
       <!--footer bar-->
